@@ -10,3 +10,12 @@ html, body {
     box-sizing: inherit;
 }
 
+ul {
+    list-style: none;
+}
+.fairFood{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: row wrap;
+    just
+}
