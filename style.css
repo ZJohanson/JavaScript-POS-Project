@@ -13,9 +13,11 @@ html, body {
 ul {
     list-style: none;
 }
+
 .fairFood{
     display: flex;
     flex-direction: row;
-    flex-wrap: row wrap;
-    just
+    height: 50px;
+    width: 50px;
+    justify-content: center;
 }
