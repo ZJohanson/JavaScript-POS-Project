@@ -6,40 +6,49 @@ let products = [
         category: 'Vegetarian',
         description: 'Tater tots made from brussel sprouts.',
         price: 1.00,
-        img: 'images/dirtyHippyTots.jpg'
+        img: 'images/dirtyHippyTots.jpg',
+        count: 0
     },
     {
         name: 'Dodger dog',
         category: 'non-Vegetarian',
         description: 'Footlong hot dog from Dodger Stadium.',
         price: .30,
-        img: 'images/dodgerDog.jpg'
+        img: 'images/dodgerDog.jpg',
+        count: 0
     }
-
 ];
-
-
-
 
 function pushProduct() {
     const productList = document.getElementById('productList');
     for(let i = 0; i < products.length; i++) {
         productList.innerHTML += `<li class='fairFood'>
-                                        <img src='${products[i].img}'>
-                                        <div class='product-name'>${products[i].name}</div>
-                                        <div class='product-category'>${products[i].category}</div>
-                                        <div class='product-description'>${products[i].description}</div>
-                                        <div class='product-price'>${products[i].price}</div>
-                                        <button class='addToCart'>Add To Cart</button>
-                                        <input type='number'></input>
-                                    </li>`;
+        <img src='${products[i].img}'>
+        <div class='product-name'>${products[i].name}</div>
+        <div class='product-category'>${products[i].category}</div>
+        <div class='product-description'>${products[i].description}</div>
+        <div class='product-price'>${products[i].price}</div>
+        <button type='submit' value='${i}'>Add To Cart</button>
+        </li>`;
     };
 }
 
 pushProduct();
 
-/* this holds the contents of the cart */
+
+// increase count property on each product
+document.getElementById('productList').addEventListener('click', event => {
+    if(event.target !== event.currentTarget) {
+        let index = event.target.value;
+        products[index].count++;
+    }
+    // load cart.html to let the user change the qty of the item
+    console.log(products);
+});
+
+
 let cartArray = [];
+/* this holds the contents of the cart */
 /* this holds the sub total */
 let subTotalDisplay = 0;
 /* function for sales tax */
