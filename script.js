@@ -2,24 +2,20 @@
 
 let products = [
     {
-        name: 'Dodger Dog',
-        category: 'non-vegetarian',
-        description: 'An extra long hot dog, with all the stuff.',
-        price: .30
-    },
-    {
-        name: 'Beaver Burger',
+        name: 'Dirty Hippy Tots',
         category: 'Vegetarian',
-        description: 'A lettuce burger with nothing.',
-        price: .30
+        description: 'Tater tots made from brussel sprouts.',
+        price: 1.00,
+        img: 'images/dirtyHippyTots.jpg'
     },
     {
-        name: 'Cat Food',
-        category: 'non-vegetarian',
-        description: 'The fanciest of feasts',
+        name: 'Dodger dog',
+        category: 'non-Vegetarian',
+        description: 'Footlong hot dog from Dodger Stadium.',
         price: .30,
-        img: 'imgName.jpg'
+        img: 'images/dodgerDog.jpg'
     }
+
 ];
 
 
@@ -28,18 +24,37 @@ let products = [
 function pushProduct() {
     const productList = document.getElementById('productList');
     for(let i = 0; i < products.length; i++) {
-        productList.innerHTML += `<li class='myLI'><div class='product-name'>${products[i].name}</div></li>`;
+        productList.innerHTML += `<li class='fairFood'>
+                                        <img src='${products[i].img}'>
+                                        <div class='product-name'>${products[i].name}</div>
+                                        <div class='product-category'>${products[i].category}</div>
+                                        <div class='product-description'>${products[i].description}</div>
+                                        <div class='product-price'>${products[i].price}</div>
+                                        <button>Add To Cart</button>
+                                        <input type='number'></input>
+                                    </li>`;
     };
 }
 
 pushProduct();
+
+/* this holds the contents of the cart */
+let cartArray = [];
+/* this holds the sub total */
+let subTotalDisplay = 0;
+/* function for sales tax */
+const calculateSalesTax = (totalBeforeTaxes) => {
+    let totalAfterTaxes = totalBeforeTaxes * 1.06;
+    return totalAfterTaxes;
+}
+
 //Each product needs an add to cart button 
 
 //Give the subtotal, sales tax, total
     //MI sales tax = 6%
     //add up price of property all products in cart = subtotal
     //multiply subtotal by 0.06 to get sales tax
-    //total = subtotal + sales tax 
+    //total = subtotal + sales tax
 
 //if the user is paying in cash, ask for the amount tendered and provide change
     //use ChangeHandler function from testing lab?
