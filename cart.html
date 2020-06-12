@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Cart</title>
 </head>
 <body>
@@ -12,10 +13,30 @@
         </nav>    
     </header>
     <div class="customerOrder">
+        <h2>Your Order</h2>
             <!-- products added to cart go here -->
+        <button class='Empty'>Empty Cart [X]</button>
     </div>
     <div class="payment">
-            <!-- payment information (cash/card, subtotal, sales tax, total) goes here -->
+        <h2>Payment</h2>
+        <div>
+            <input type='radio' id='cash' name='payment-method' value='cash' checked>
+            <label for='cash'>Cash</label>
+        </div>
+        <div>
+            <input type ='radio' id='card' name='payment-method' value='card'>
+            <label for='card'>Card</label>
+        </div>
+        <div>
+            <p>Subtotal:</p>
+            <p>Tax:</p>
+            <p>Total:</p>
+            <p>Leave a tip?</p>
+        </div>
+        <button class='checkout'>Checkout</button>
+        
+        <!-- payment information (cash or card, subtotal, sales tax, total) goes here -->
     </div>                
 </body>
+<script src='script.js'></script>
 </html>
