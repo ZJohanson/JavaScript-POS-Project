@@ -30,7 +30,7 @@ function pushProduct() {
                                         <div class='product-category'>${products[i].category}</div>
                                         <div class='product-description'>${products[i].description}</div>
                                         <div class='product-price'>${products[i].price}</div>
-                                        <button>Add To Cart</button>
+                                        <button class='addToCart'>Add To Cart</button>
                                         <input type='number'></input>
                                     </li>`;
     };
