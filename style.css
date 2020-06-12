@@ -17,12 +17,8 @@ body {
   display: flex;
     list-style: none;
 }
-li.title{
-    font-size: 8em;
-    justify-self: center;
-    font-family: Jazz LET,fantasy;
-}
-li.cart{
+
+.cart{
     justify-content: flex-end;
 }
 img {
@@ -31,8 +27,11 @@ img {
   width: 350px;
   height: 200px;
 }
-li.title{
-    align-items: center;
+h1 {
+    text-align:center;
+    font-size: 8em;
+    justify-self: center;
+    font-family: Jazz LET,fantasy;
 }
 .products{
     display: flex;

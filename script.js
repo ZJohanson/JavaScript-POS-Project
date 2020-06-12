@@ -28,7 +28,7 @@ function pushProduct() {
         <div class='product-category'>${products[i].category}</div>
         <div class='product-description'>${products[i].description}</div>
         <div class='product-price'>${products[i].price}</div>
-        <button type='submit' value='${i}'>Add To Cart</button>
+        <button class="addToCart" type='submit' value='${i}'>Add To Cart</button>
         </li>`;
     };
 }
