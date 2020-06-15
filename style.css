@@ -83,6 +83,12 @@ img {
   color: white;
   margin: 20px;
 }
+
+.push-off-screen {
+  position: absolute;
+  left: -1000px;
+}
+
 .addToCart {
   border: none;
   outline: 0;
