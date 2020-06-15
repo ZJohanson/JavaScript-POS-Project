@@ -16,7 +16,31 @@ let products = [
         price: .30,
         img: 'images/dodgerDog.jpg',
         count: 0
-    }
+    },
+    {
+        name: 'Ultimate Banana Split',
+        category: 'Vegetarian',
+        description: 'A banana split with the maximum amount of ice cream legally allowed by the state of Wisconsin.',
+        price: 4.00,
+        img: 'images/bananaSplit.jpg',
+        count: 0
+    },
+    {
+        name: 'Backyard BBQ Burrito',
+        category: 'non-Vegetarian',
+        description: 'Massive burrito stuffed with everything a backyard barbeque would have, hold the grill.',
+        price: 2.00,
+        img: 'images/bbqBurrito.jpg',
+        count: 0
+    },
+    {
+        name: 'Frites Charcuterie Board',
+        category: 'Vegetarian',
+        description: 'Charcuterie board loaded with various fries and dipping sauces.',
+        price: 1.00,
+        img: 'images/fryBoard.jpg',
+        count: 0
+    },
 ];
 
 function pushProduct() {
@@ -28,7 +52,7 @@ function pushProduct() {
         <div class='product-category'>${products[i].category}</div>
         <div class='product-description'>${products[i].description}</div>
         <div class='product-price'>${products[i].price}</div>
-        <button type='submit' value='${i}'>Add To Cart</button>
+        <button class="addToCart" type='submit' value='${i}'>Add To Cart</button>
         </li>`;
     };
 }
