@@ -11,7 +11,7 @@ let products = [
     },
     {
         name: 'Dodger dog',
-        category: 'non-Vegetarian',
+        category: 'Non-Vegetarian',
         description: 'Footlong hot dog from Dodger Stadium.',
         price: .30,
         img: 'images/dodgerDog.jpg',
@@ -27,7 +27,7 @@ let products = [
     },
     {
         name: 'Backyard BBQ Burrito',
-        category: 'non-Vegetarian',
+        category: 'Non-Vegetarian',
         description: 'Massive burrito stuffed with everything a backyard barbeque would have, hold the grill.',
         price: 2.00,
         img: 'images/bbqBurrito.jpg',
@@ -67,10 +67,11 @@ let products = [
     }
 ];
 
+// Push Products from object literals into index.html page
 function pushProduct() {
     const productList = document.getElementById('productList');
     for(let i = 0; i < products.length; i++) {
-        productList.innerHTML += `<li class='fairFood'>
+        productList.innerHTML += `<li class='fairFood ${products[i].category}'>
         <img src='${products[i].img}'>
         <div class='product-name'>${products[i].name}</div>
         <div class='product-category'>${products[i].category}</div>
@@ -83,7 +84,6 @@ function pushProduct() {
 
 pushProduct();
 
-
 // increase count property on each product
 document.getElementById('productList').addEventListener('click', event => {
     if(event.target !== event.currentTarget) {
@@ -94,7 +94,25 @@ document.getElementById('productList').addEventListener('click', event => {
     console.log(products);
 });
 
+// Sort food by category
+const allFood = document.querySelectorAll('.fairFood');
+const vegetarian = document.querySelectorAll('.Vegetarian');
+const nonVeg = document.querySelectorAll('.Non-Vegetarian');
 
+document.getElementById('allFoodBtn').addEventListener('click', function(){
+    allFood.forEach(element => element.classList.remove('push-off-screen'))
+});
+
+document.getElementById('vegBtn').addEventListener('click', function(){
+    vegetarian.forEach(element => element.classList.remove('push-off-screen'))
+    nonVeg.forEach(element => element.classList.add('push-off-screen'))
+});
+
+document.getElementById('nonVegBtn').addEventListener('click', function(){
+    vegetarian.forEach(element => element.classList.add('push-off-screen'))
+    nonVeg.forEach(element => element.classList.remove('push-off-screen'))
+  });
+    
 let cartArray = [];
 /* this holds the contents of the cart */
 /* this holds the sub total */
