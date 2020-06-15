@@ -5,6 +5,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: rgb(0, 0, 0);
 }
 
 *,
@@ -12,38 +13,74 @@ body {
 *::after {
   box-sizing: inherit;
 }
-
-  ul {
+.section {
   display: flex;
-    list-style: none;
+  position: relative;
+  width: 100%;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+h1 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 7rem;
+  font-family: "Expletus Sans", cursive;
+  padding: 2px;
+  margin: 15px;
+  z-index: 1;
+}
+.video-container {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+.color-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: lightskyblue;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.1;
+}
+.cart {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+  color: antiquewhite;
+  z-index: 1;
+}
+ul {
+  display: flex;
+  list-style: none;
+  justify-items: baseline;
+  z-index: 1;
 }
 
-.cart{
-    justify-content: flex-end;
-}
 img {
   display: flex;
   flex-direction: row;
   width: 350px;
   height: 200px;
 }
-h1 {
-    text-align:center;
-    font-size: 8em;
-    justify-self: center;
-    font-family: Jazz LET,fantasy;
-}
-.products{
-    display: flex;
+
+.products {
+  display: flex;
+  flex-direction: column;
 }
 .fairFood {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 8px 0 rgba(240, 240, 240, 0.2);
   max-width: 400px;
   text-align: center;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: white;
   margin: 20px;
 }
 .addToCart {
@@ -51,7 +88,7 @@ h1 {
   outline: 0;
   padding: 12px;
   color: rgb(255, 255, 255);
-  background-color:rgb(121, 34, 34);
+  background-color: rgb(121, 34, 34);
   text-align: center;
   cursor: pointer;
   width: 100%;
