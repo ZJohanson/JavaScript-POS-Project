@@ -48,6 +48,30 @@ let products = [
         price: 3.00,
         img: 'images/braisedPorkBellyBun.jpg'
     },
+    {
+        name: 'Massive Margarita',
+        category: 'non-Vegetarian',
+        description: 'This massive margarita is more than just a drink, it\'s your whole meal.',
+        price: 8.00,
+        img: '',
+        count: 0,
+    },
+    {
+        name: 'Loaded Shake',
+        category: 'non-Vegetarian',
+        description: 'Ignore the calories and indulge yourself in this shake, loaded with tons of our favorite sweets.',
+        price: 7.00,
+        img: '',
+        count: 0,
+    },
+    {
+        name: 'Burger Tower',
+        category: 'non-Vegetarian',
+        description: 'A gigantic burger with twelve patties and enough cheese to make Wisconsin proud',
+        price: 15.00,
+        img: '',
+        count: 0,
+    }
 ];
 
 // Push Products from object literals into index.html page
