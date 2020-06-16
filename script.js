@@ -53,24 +53,39 @@ let products = [
         category: 'non-Vegetarian',
         description: 'This massive margarita is more than just a drink, it\'s your whole meal.',
         price: 8.00,
+<<<<<<< HEAD
         img: 'images/MassiveMargarita',
         count: 0,
+=======
+        img: 'images/Massivemargarita',
+        count: 0
+>>>>>>> Zack
     },
     {
         name: 'Loaded Shake',
         category: 'non-Vegetarian',
         description: 'Ignore the calories and indulge yourself in this shake, loaded with tons of our favorite sweets.',
         price: 7.00,
+<<<<<<< HEAD
         img: 'images/LoadedShake.png',
         count: 0,
+=======
+        img: 'images',
+        count: 0
+>>>>>>> Zack
     },
     {
         name: 'Burger Tower',
         category: 'non-Vegetarian',
         description: 'A gigantic burger with twelve patties and enough cheese to make Wisconsin proud',
         price: 15.00,
+<<<<<<< HEAD
         img: 'images/burgertower.jpg',
         count: 0,
+=======
+        img: '',
+        count: 0
+>>>>>>> Zack
     }
 ];
 
