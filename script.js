@@ -59,7 +59,7 @@ function pushProduct() {
         <div class='product-name'>${products[i].name}</div>
         <div class='product-category'>${products[i].category}</div>
         <div class='product-description'>${products[i].description}</div>
-        <div class='product-price'>${products[i].price}</div>
+        <div class='product-price'>$${products[i].price.toFixed(2)}</div>
         <button class="addToCart" type='submit' value='${i}'>Add To Cart</button>
         </li>`;
     };
@@ -134,6 +134,4 @@ const calculateSalesTax = (totalBeforeTaxes) => {
     //Generate PDF?
     //Generate new html page?
         //include labels for items, total, subtotal, etc -- don't just list the values
-    //Style up the receipt so it looks nice? If we're thinking checkout/order summary page vs. thermal paper receipt 
-        
-    
+    //Style up the receipt so it looks nice? If we're thinking checkout/order summary page vs. thermal paper receipt        
