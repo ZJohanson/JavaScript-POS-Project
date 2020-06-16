@@ -1,24 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NAME OF COMPANY</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Expletus+Sans:wght@700&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
 </head>
+<div class="homePageContainer">
 <body>
-    <header>
-        <nav>
-            <ul>
-                    <li class='title'><strong>FAIRFOOD</strong></a></li>   
-                <li class="cart">Cart</li>
-            </ul>
-        </nav>
-    </header>
-    <div class='banner'>
-        <!-- an appropriate and aesthetically pleasing image-->
+    <div class="section">
+        <h1>FAIR FOOD</h1>
+        <div class="video-container">
+            <div class="color-overlay"></div>
+            <video autoplay loop muted>
+                <source src="images/video.mp4" type="video/mp4">
+            </video>
+        </div>
+      <a href="cart.html"><span class="iconify" data-icon="fa-shopping-basket" data-inline="false"></span></a>
+       
     </div>
+    <!-- Select category of food buttons -->
+    
+    <div class="category">
+        <button class='btn' id='allFoodBtn'>All Food</button>
+        <button class='btn' id='vegBtn'>Vegetarian</button>
+        <button class='btn' id='nonVegBtn'>Non-Vegetarian</button>
+    </div>
+  
     <div class='products'>
         <ul id="productList">
         </ul>
@@ -28,4 +39,6 @@
     </footer>
 </body>
 <script src='script.js'></script>
+
 </html>
+</div>
