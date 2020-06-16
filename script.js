@@ -41,6 +41,13 @@ let products = [
         img: 'images/fryBoard.jpg',
         count: 0
     },
+    {
+        name: 'Pork Belly Bun',
+        category: 'Non-Vegetarian',
+        description: 'Two slices of pork belly, slow-cooked in dark soy sauce, tucked inside a steamed bun with romaine lettuce and a flat-leaf parsley garnish.',
+        price: 3.00,
+        img: 'images/braisedPorkBellyBun.jpg'
+    },
 ];
 
 // Push Products from object literals into index.html page
