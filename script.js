@@ -42,6 +42,13 @@ let products = [
         count: 0
     },
     {
+        name: 'Pork Belly Bun',
+        category: 'Non-Vegetarian',
+        description: 'Two slices of pork belly, slow-cooked in dark soy sauce, tucked inside a steamed bun with romaine lettuce and a flat-leaf parsley garnish.',
+        price: 3.00,
+        img: 'images/braisedPorkBellyBun.jpg'
+    },
+    {
         name: 'Massive Margarita',
         category: 'non-Vegetarian',
         description: 'This massive margarita is more than just a drink, it\'s your whole meal.',
