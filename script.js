@@ -42,6 +42,13 @@ let products = [
         count: 0
     },
     {
+        name: 'Pork Belly Bun',
+        category: 'Non-Vegetarian',
+        description: 'Two slices of pork belly, slow-cooked in dark soy sauce, tucked inside a steamed bun with romaine lettuce and a flat-leaf parsley garnish.',
+        price: 3.00,
+        img: 'images/braisedPorkBellyBun.jpg'
+    },
+    {
         name: 'Massive Margarita',
         category: 'non-Vegetarian',
         description: 'This massive margarita is more than just a drink, it\'s your whole meal.',
@@ -76,7 +83,7 @@ function pushProduct() {
         <div class='product-name'>${products[i].name}</div>
         <div class='product-category'>${products[i].category}</div>
         <div class='product-description'>${products[i].description}</div>
-        <div class='product-price'>${products[i].price}</div>
+        <div class='product-price'>$${products[i].price.toFixed(2)}</div>
         <button class="addToCart" type='submit' value='${i}'>Add To Cart</button>
         </li>`;
     };
