@@ -76,7 +76,7 @@ function pushProduct() {
         <div class='product-name'>${products[i].name}</div>
         <div class='product-category'>${products[i].category}</div>
         <div class='product-description'>${products[i].description}</div>
-        <div class='product-price'>${products[i].price}</div>
+        <div class='product-price'>$${products[i].price.toFixed(2)}</div>
         <button class="addToCart" type='submit' value='${i}'>Add To Cart</button>
         </li>`;
     };
