@@ -72,6 +72,15 @@ let products = [
         img: 'images/burgertower.jpg',
         count: 0,
 
+    },
+    {
+        name: 'Krispy Kreme Sloppy Joe',
+        category: 'non-Vegetarian',
+        description: 'a deep-fried, beef-based, cheddar-cheese creation, served on two halves of glazed donut',
+        price: 15.00,
+        img: 'images/sloppyjoe.jpg',
+        count: 0,
+
     }
 ];
 
