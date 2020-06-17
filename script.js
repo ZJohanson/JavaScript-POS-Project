@@ -46,47 +46,32 @@ let products = [
         category: 'Non-Vegetarian',
         description: 'Two slices of pork belly, slow-cooked in dark soy sauce, tucked inside a steamed bun with romaine lettuce and a flat-leaf parsley garnish.',
         price: 3.00,
-        img: 'images/braisedPorkBellyBun.jpg'
+        img: 'images/braisedPorkBellyBun.png'
     },
     {
         name: 'Massive Margarita',
         category: 'non-Vegetarian',
         description: 'This massive margarita is more than just a drink, it\'s your whole meal.',
         price: 8.00,
-        img: 'images/Massivemargarita',
-        count: 0
+        img: 'images/MassiveMargarita.jpg',
+        count: 0,
     },
     {
         name: 'Loaded Shake',
         category: 'non-Vegetarian',
         description: 'Ignore the calories and indulge yourself in this shake, loaded with tons of our favorite sweets.',
         price: 7.00,
-        img: 'images',
-        count: 0
+        img: 'images/LoadedShake.png',
+        count: 0,
     },
     {
         name: 'Burger Tower',
         category: 'non-Vegetarian',
         description: 'A gigantic burger with twelve patties and enough cheese to make Wisconsin proud',
         price: 15.00,
-        img: '',
-        count: 0
-    },
-    {
-        name: 'Krispy Kreme Sloppy Joe',
-        category: 'non-Vegetarian',
-        description: 'a deep-fried, beef-based, cheddar-cheese creation, served on two halves of glazed donut',
-        price: 15.00,
-        img: 'images/sloppyjoe.jpg',
-        count: 0
-    },
-    {
-        name: 'Deep Fried Cheese Curds',
-        category: 'Vegetarian',
-        description: 'a deep-fried cheese square',
-        price: 15.00,
-        img: 'images/cheesecurds.jpg',
-        count: 0
+        img: 'images/burgertower.jpg',
+        count: 0,
+
     }
 ];
 
