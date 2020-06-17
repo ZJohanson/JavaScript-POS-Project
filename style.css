@@ -94,7 +94,11 @@ img {
   position: absolute;
   left: -1000px;
 }
-
+.product-name ,.product-category,.product-description {
+  border-bottom-style: outset;
+  border-color:white;
+  opacity: 50%;
+}
 .addToCart {
   border: none;
   outline: 0;
