@@ -86,7 +86,10 @@ img {
   color: white;
   margin: 20px;
 }
-
+.category{
+  display: flex;
+  justify-content: center;
+}
 .push-off-screen {
   position: absolute;
   left: -1000px;
@@ -103,10 +106,10 @@ img {
   width: 100%;
   font-size: 18px;
 }
+
 #allFoodBtn, #vegBtn, #nonVegBtn{
    position: relative;
-    display: block;
-    margin: 30px auto 0;
+    margin: 30px;
     padding: 14px 15px;
     color: #fff;
     background-color: rgb(121, 34, 34);;
