@@ -109,6 +109,7 @@ pushProduct();
 // Add to Cart 
 let cartArray = [];
 let cart = document.getElementById('cartArray');
+let total = document.getElementById('total');
 // increase count property on each product
 document.getElementById('productList').addEventListener('click', event => {
     if(event.target !== event.currentTarget) {
@@ -117,13 +118,31 @@ document.getElementById('productList').addEventListener('click', event => {
         cartArray.push(products[index]);
     }
     cart.innerText = '';
+    total.innerText = '';
     products.forEach(obj => {
         if(obj.count > 0) {
-            cart.innerText += `${obj.name} QTY:  ${obj.count} `
+            cart.innerText += `${obj.name} QTY:  ${obj.count} `;
         }
     })
+    let sub = subtotal(cartArray);
+    total.innerText = taxable(sub);
     console.log(cartArray);
 });
+
+// Display subtotal
+function subtotal(array) {
+    let subtotal = 0;
+    for(let obj of array) {
+        subtotal += obj.price * obj.count;
+    }
+    return subtotal;
+}
+
+// Convert subtotal to Total with Tax
+function taxable(subtotal) {
+    return `Total Due After Tax: $${(subtotal * 1.06).toFixed(2)}`;
+}
+
 
 // Sort food by category
 const allFood = document.querySelectorAll('.fairFood');
@@ -144,20 +163,7 @@ document.getElementById('nonVegBtn').addEventListener('click', function(){
     nonVeg.forEach(element => element.classList.remove('push-off-screen'))
 });
 
-// /* this holds the sub total */
-// let subTotalDisplay = 0;
-// /* function for sales tax */
-// const calculateSalesTax = (totalBeforeTaxes) => {
-//     let totalAfterTaxes = totalBeforeTaxes * 1.06;
-//     return totalAfterTaxes;
-// }
 
-
-//Give the subtotal, sales tax, total
-    //MI sales tax = 6%
-    //add up price of property all products in cart = subtotal
-    //multiply subtotal by 0.06 to get sales tax
-    //total = subtotal + sales tax
 
 //if the user is paying in cash, ask for the amount tendered and provide change
     //use ChangeHandler function from testing lab?
