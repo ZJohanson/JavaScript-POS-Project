@@ -124,25 +124,18 @@ document.getElementById('productList').addEventListener('click', event => {
             cart.innerText += `${obj.name} QTY:  ${obj.count} `;
         }
     })
-    let sub = subtotal(cartArray);
-    total.innerText = taxable(sub);
+    total.innerText = `Total: $${(subtotalPlusTax(cartArray)).toFixed(2)}`;
     console.log(cartArray);
 });
 
-// Display subtotal
-function subtotal(array) {
+// Get subtotal and convert to post-tax Total
+function subtotalPlusTax(array) {
     let subtotal = 0;
     for(let obj of array) {
         subtotal += obj.price * obj.count;
     }
-    return subtotal;
+    return subtotal * 1.06;
 }
-
-// Convert subtotal to Total with Tax
-function taxable(subtotal) {
-    return `Total Due After Tax: $${(subtotal * 1.06).toFixed(2)}`;
-}
-
 
 // Sort food by category
 const allFood = document.querySelectorAll('.fairFood');
