@@ -8,6 +8,7 @@ body {
 }
 .homePageContainer{
   background-color: rgb(0, 0, 0);
+  
 }
 *,
 *::before,
@@ -131,3 +132,24 @@ img {
     -o-transition: all 1s ease;
     transition: all 1s ease;
 }
+.customerOrder {
+display: flex;
+justify-content: center;
+}
+.Empty {
+  position: relative;
+    margin: 30px;
+    padding: 14px 15px;
+    color: #fff;
+    background-color: rgb(121, 34, 34);;
+    font-size:14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: .08em;
+    border-radius: 0;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+.yourOrder

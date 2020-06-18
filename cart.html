@@ -12,10 +12,10 @@
             <!-- navbar probably the same as index.html, maybe with different title? -->
         </nav>    
     </header>
-    <div class="customerOrder">
-        <h2>Your Order</h2>
+    <div class="customerOrder" id='customerOrder'>
+        <h2 class="yourOrder">Your Order</h2>
             <!-- products added to cart go here -->
-        <button class='Empty'>Empty Cart [X]</button>
+        <button class="Empty">Empty Cart [X]</button>
     </div>
     <div class="payment">
         <h2>Payment</h2>
@@ -29,12 +29,27 @@
         </div>
         <div class='card-info'> 
         <!-- Show only if 'card' radio button is selected -->
-            <input type='text' id='card-number' name='card-number' value='card-number'>
             <label for='card-number'>Card Number</label>
-            <input type='text' id='card-expiration' name='card-expiration' value='expiration-date'>
+            <input type='text' id='card-number' name='card-number' value=''>
             <label for='card-expiration'>Expiration Date</label>
-            <input type='text' id='cvv' name='cvv' value='cvv'>
+            <input type='text' id='card-expiration' name='card-expiration' value=''>
             <label for='cvv'>CVV</label>
+            <input type='text' id='cvv' name='cvv' value=''>
+        </div>
+        <h2>Billing information</h2>
+        <div class='billing info'>
+            <label for='card-number'>First Name</label>
+            <input type='text' id='first-name' name='first-name' value=''>
+            <label for='last-name'>Last Name</label>
+            <input type='text' id='last-name' name='last-name' value=''>
+            <label for='cvv'>CVV</label>
+            <input type='text' id='cvv' name='cvv' value=''>
+            <label for='address'>Address</label>
+            <input type='text' id='address' name='address' value=''>
+            <label for='city'>City</label>
+            <input type='text' id='city' name='city' value=''>
+            <label for='cvv'>ZIP Code</label>
+            <input type='text' id='zip-code' name='cvv' value=''>
         </div>
         <div>
             <p>Subtotal:</p>
