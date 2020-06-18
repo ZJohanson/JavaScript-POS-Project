@@ -97,18 +97,33 @@ function pushProduct() {
         <button class="addToCart" type='submit' value='${i}'>Add To Cart</button>
         </li>`;
     };
-}
+    // document.querySelectorAll('.addToCart').forEach(element => {
+    //     element.addEventListener('click', listener);
+    // })
+    // function listener(event) {
+    //     console.log(event.target.value);
+    // }
+};
 
 pushProduct();
 
+// Add to Cart 
+let cartArray = [];
+let cart = document.getElementById('cartArray');
 // increase count property on each product
 document.getElementById('productList').addEventListener('click', event => {
     if(event.target !== event.currentTarget) {
         let index = event.target.value;
         products[index].count++;
+        cartArray.push(products[index]);
     }
-    // load cart.html to let the user change the qty of the item
-    console.log(products);
+    cart.innerText = '';
+    products.forEach(obj => {
+        if(obj.count > 0) {
+            cart.innerText += `${obj.name} QTY:  ${obj.count} `
+        }
+    })
+    console.log(cartArray);
 });
 
 // Sort food by category
@@ -128,19 +143,16 @@ document.getElementById('vegBtn').addEventListener('click', function(){
 document.getElementById('nonVegBtn').addEventListener('click', function(){
     vegetarian.forEach(element => element.classList.add('push-off-screen'))
     nonVeg.forEach(element => element.classList.remove('push-off-screen'))
-  });
-    
-let cartArray = [];
-/* this holds the contents of the cart */
-/* this holds the sub total */
-let subTotalDisplay = 0;
-/* function for sales tax */
-const calculateSalesTax = (totalBeforeTaxes) => {
-    let totalAfterTaxes = totalBeforeTaxes * 1.06;
-    return totalAfterTaxes;
-}
+});
 
-//Each product needs an add to cart button 
+// /* this holds the sub total */
+// let subTotalDisplay = 0;
+// /* function for sales tax */
+// const calculateSalesTax = (totalBeforeTaxes) => {
+//     let totalAfterTaxes = totalBeforeTaxes * 1.06;
+//     return totalAfterTaxes;
+// }
+
 
 //Give the subtotal, sales tax, total
     //MI sales tax = 6%
