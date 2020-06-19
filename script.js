@@ -3,7 +3,7 @@ let products = [
     {
         name: 'Dirty Hippy Tots',
         category: 'Vegetarian',
-        description: 'Tater tots made from brussel sprouts.',
+        description: 'Tater tots made from Brussels sprouts.',
         price: 1.00,
         img: 'images/dirtyHippyTots.jpg',
         count: 0
@@ -11,7 +11,7 @@ let products = [
     {
         name: 'Dodger Dog',
         category: 'Non-Vegetarian',
-        description: 'Footlong hot dog from Dodger Stadium.',
+        description: 'A ballpark classic. Foot-long hot dog from Dodger Stadium.',
         price: .30,
         img: 'images/dodgerDog.jpg',
         count: 0
@@ -72,7 +72,7 @@ let products = [
     },
     {
         name: 'Loaded Shake',
-        category: 'Non-Vegetarian',
+        category: 'Vegetarian',
         description: 'Ignore the calories and indulge yourself in this shake, loaded with tons of our favorite sweets.',
         price: 7.00,
         img: 'images/LoadedShake.png',
@@ -81,7 +81,7 @@ let products = [
     {
         name: 'Burger Tower',
         category: 'Non-Vegetarian',
-        description: 'A gigantic burger with twelve patties and enough cheese to make Wisconsin proud',
+        description: 'A gigantic burger with twelve patties and enough cheese to make Wisconsin proud.',
         price: 15.00,
         img: 'images/burgertower.jpg',
         count: 0
@@ -89,7 +89,7 @@ let products = [
     {
         name: 'Krispy Kreme Sloppy Joe',
         category: 'Non-Vegetarian',
-        description: 'a deep-fried, beef-based, cheddar-cheese creation, served on two halves of glazed donut',
+        description: 'Aa deep-fried, beef-based, cheddar-cheese creation, served on two halves of glazed donut.',
         price: 15.00,
         img: 'images/sloppyjoe.jpg',
         count: 0
