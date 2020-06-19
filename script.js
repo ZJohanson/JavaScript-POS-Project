@@ -93,6 +93,7 @@ function pushProduct() {
         <div class='product-description'>${products[i].description}</div>
         <div class='product-price'>$${products[i].price.toFixed(2)}</div>
         <button class="addToCart" type='submit' value='${i}'>Add To Cart</button>
+        <button class="removeFromCart" type='submit' value='${i}'>Remove From Cart</button>
         </li>`;
     };
 };
@@ -105,10 +106,15 @@ const cart = document.getElementById('cartArray');
 const total = document.getElementById('total');
 // increase count property on each product
 document.getElementById('productList').addEventListener('click', event => {
-    if(event.target !== event.currentTarget) {
+    if(event.target.className === 'addToCart') {
         let index = event.target.value;
         products[index].count++;
         cartArray.push(products[index]);
+    }
+    if(event.target.className === 'removeFromCart') {
+        let index = event.target.value;
+        products[index].count--;
+        cartArray.splice(products[index], 1);
     }
     cart.innerText = '';
     total.innerText = '';
@@ -185,7 +191,9 @@ document.getElementById('checkout').addEventListener('click', event => {
     receipt.innerHTML = '';
     for(let obj of finalCart) {
         receipt.innerHTML += `<img src='${obj.img}'> ${obj.name}  QTY:  ${obj.count} PRICE: $${(obj.price).toFixed(2)}`;
+
     }
+    receipt.innerHTML += `<h1>Total: $${(subtotalPlusTax(cartArray)).toFixed(2)}</h1>`;
 })
 // Provide a receipt for the payment which includes the item(s) bought, the subtotal, total, and anything else of interest. 
 

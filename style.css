@@ -137,7 +137,7 @@ img {
 display: flex;
 justify-content: center;
 }
-.Empty {
+.empty {
   position: relative;
     margin: 30px;
     padding: 14px 15px;
@@ -196,4 +196,25 @@ justify-content: center;
   letter-spacing: .08em;
   border-radius: 0;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+input[type=text] {
+   justify-content: center;
+  width: 20%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+#cashPayment{
+ color:white;
+}
+.cartPayment{
+  color:white;
+}
+#choosePaymentType{
+  color: white;
+}
+#reciept{
+  color: white;
 }
