@@ -89,7 +89,7 @@ let products = [
     {
         name: 'Krispy Kreme Sloppy Joe',
         category: 'Non-Vegetarian',
-        description: 'Aa deep-fried, beef-based, cheddar-cheese creation, served on two halves of glazed donut.',
+        description: 'A deep-fried, beef-based, cheddar-cheese creation, served on two halves of glazed donut.',
         price: 15.00,
         img: 'images/sloppyjoe.jpg',
         count: 0
