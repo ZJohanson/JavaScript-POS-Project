@@ -1,5 +1,4 @@
 // name, category, description, price
-
 let products = [
     {
         name: 'Dirty Hippy Tots',
@@ -96,20 +95,14 @@ function pushProduct() {
         <button class="addToCart" type='submit' value='${i}'>Add To Cart</button>
         </li>`;
     };
-    // document.querySelectorAll('.addToCart').forEach(element => {
-    //     element.addEventListener('click', listener);
-    // })
-    // function listener(event) {
-    //     console.log(event.target.value);
-    // }
 };
 
 pushProduct();
 
 // Add to Cart 
 let cartArray = [];
-let cart = document.getElementById('cartArray');
-let total = document.getElementById('total');
+const cart = document.getElementById('cartArray');
+const total = document.getElementById('total');
 // increase count property on each product
 document.getElementById('productList').addEventListener('click', event => {
     if(event.target !== event.currentTarget) {
@@ -125,14 +118,13 @@ document.getElementById('productList').addEventListener('click', event => {
         }
     })
     total.innerText = `Total: $${(subtotalPlusTax(cartArray)).toFixed(2)}`;
-    console.log(cartArray);
 });
 
 // Get subtotal and convert to post-tax Total
 function subtotalPlusTax(array) {
     let subtotal = 0;
     for(let obj of array) {
-        subtotal += obj.price * obj.count;
+        subtotal = obj.price * obj.count;
     }
     return subtotal * 1.06;
 }
@@ -156,15 +148,48 @@ document.getElementById('nonVegBtn').addEventListener('click', function(){
     nonVeg.forEach(element => element.classList.remove('push-off-screen'))
 });
 
+// BILLING
+
+const cashOrCard = () => document.querySelector('input[name="payment-method"]:checked').value;
+
+document.getElementById('choosePaymentType').addEventListener('click', event => {
+    const creditCardForm = document.getElementById('cardInfo');
+    const cashForm = document.getElementById('cashPayment');
+    if(cashOrCard() === 'card'){
+        creditCardForm.classList.remove('push-off-screen');
+        cashForm.classList.add('push-off-screen'); 
+        
+    } else {
+        creditCardForm.classList.add('push-off-screen');
+        cashForm.classList.remove('push-off-screen');
+    }
+})
+
+let amountTendered = () => document.getElementById('cashForm').value;
+
+function makeChange() {
+    return (parseInt(amountTendered()) - subtotalPlusTax(cartArray)).toFixed(2);
+}
+
+document.getElementById('cashOut').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('change').innerText = `Keep the change you filthy animal: $${makeChange()}`;
+})
+
+document.getElementById('checkout').addEventListener('click', event => {
+    event.preventDefault();
+    const receipt = document.getElementById('receipt');
+    receipt.classList.remove('push-off-screen');
+
+    let finalCart = new Set(cartArray);
+    receipt.innerHTML = '';
+    for(let obj of finalCart) {
+        receipt.innerHTML += `<img src='${obj.img}'> ${obj.name}  QTY:  ${obj.count} PRICE: $${(obj.price).toFixed(2)}`;
+    }
+})
+// Provide a receipt for the payment which includes the item(s) bought, the subtotal, total, and anything else of interest. 
 
 
-//if the user is paying in cash, ask for the amount tendered and provide change
-    //use ChangeHandler function from testing lab?
-        //specific denomination of change (x quarters, y pennies, etc) not needed
-    //create change function with parameter 'cashTendered'
-        //change is 'cashTendered' - total
-        //check if cashTendered is greater than or equal to total
-            //isPaymentSufficient function from testing lab?
 
 //If the user is paying with a card, ask for the card number, expiration, and CVV
     //If 'pay by card' option is selected/clicked/checked, then 

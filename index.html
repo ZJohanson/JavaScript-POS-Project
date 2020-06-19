@@ -46,6 +46,59 @@
 
         </div>
     </div>
+    <div class="payment">
+        <h2 class= "cartPayment">Payment</h2>
+        <form id='choosePaymentType'>
+            <input type='radio' id='cash' name='payment-method' value='cash' checked="checked">
+            <label for='cash'>Cash</label>
+            <input type='radio' id='card' name='payment-method' value='card'>
+            <label for='card'>Card</label>
+        </form>
+        <form id="cashPayment" class="">
+            <label>Cash Amount</label>
+            <input type='text' id='cashForm' name='cashForm' value='0.00'>
+            <button type="submit" name="cashForm" id='cashOut'>Pay Us Money</button>
+        </form>
+        <div class="change" id="change">
+
+        </div>
+        
+        
+        <div class='card-info push-off-screen' id="cardInfo"> 
+        <!-- Show only if 'card' radio button is selected -->
+            <label for='card-number'>Card Number</label>
+            <input type='text' id='card-number' name='card-number' value=''>
+            <label for='card-expiration'>Expiration Date</label>
+            <input type='text' id='card-expiration' name='card-expiration' value=''>
+            <label for='cvv'>CVV</label>
+            <input type='text' id='cvv' name='cvv' value=''>
+        </div>
+        </div> 
+        <div class="billing">
+        <h2>Billing information</h2>
+        <div class='billing info'>
+            <label for='card-number'>First Name</label>
+            <input type='text' id='first-name' name='first-name' value=''>
+            <label for='last-name'>Last Name</label>
+            <input type='text' id='last-name' name='last-name' value=''>
+            <label for='cvv'>CVV</label>
+            <input type='text' id='cvv' name='cvv' value=''>
+            <label for='address'>Address</label>
+            <input type='text' id='address' name='address' value=''>
+            <label for='city'>City</label>
+            <input type='text' id='city' name='city' value=''>
+            <label for='zip-code'>ZIP Code</label>
+            <input type='text' id='zip-code' name='zip-code' value=''>
+        </div>
+        
+        <button class='checkout' id=""><submit>Checkout</submit></button>
+        
+     </div>
+     <div class="modal push-off-screen" id="receipt">
+
+     </div>   
+        <!-- payment information (cash or card, subtotal, sales tax, total) goes here -->
+
     <footer>
         <!-- footer info goes here -->
     </footer>
@@ -53,4 +106,3 @@
 </body>
 
 </html>
-</div>
