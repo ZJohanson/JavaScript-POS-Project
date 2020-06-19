@@ -10,7 +10,7 @@ let products = [
         count: 0
     },
     {
-        name: 'Dodger dog',
+        name: 'Dodger Dog',
         category: 'Non-Vegetarian',
         description: 'Footlong hot dog from Dodger Stadium.',
         price: .30,
@@ -47,6 +47,20 @@ let products = [
         description: 'Two slices of pork belly, slow-cooked in dark soy sauce, tucked inside a steamed bun with romaine lettuce and a flat-leaf parsley garnish.',
         price: 3.00,
         img: 'images/braisedPorkBellyBun.jpg'
+    },
+    {
+        name: 'Shanghai Scallion Pancake',
+        category: 'Vegetarian',
+        description: 'Crispy, flaky, chewy Chinese flatbread filled with green onions. Served with dipping sauce.',
+        price: 1.50,
+        img: 'images/scallionPancake.jpg'
+    },
+    {
+        name: 'Giant Chicken Cutlet',
+        category: 'Non-Vegetarian', 
+        description: 'A night market classic from the streets of Taiwan. A massive chicken breast cutlet is pounded, marinated, breaded in sweet potato flour, deep-fried, and seasoned with a house blend of salt and pepper powder',
+        price: 4.00,
+        img: 'images/giantChickenCutlet.png'
     },
     {
         name: 'Massive Margarita',
