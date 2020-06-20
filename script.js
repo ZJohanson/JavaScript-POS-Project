@@ -3,15 +3,15 @@ let products = [
     {
         name: 'Dirty Hippy Tots',
         category: 'Vegetarian',
-        description: 'Tater tots made from brussel sprouts.',
+        description: 'Tater tots made from Brussels sprouts.',
         price: 1.00,
         img: 'images/dirtyHippyTots.jpg',
         count: 0
     },
     {
-        name: 'Dodger dog',
+        name: 'Dodger Dog',
         category: 'Non-Vegetarian',
-        description: 'Footlong hot dog from Dodger Stadium.',
+        description: 'A ballpark classic. Foot-long hot dog from Dodger Stadium.',
         price: .30,
         img: 'images/dodgerDog.jpg',
         count: 0
@@ -49,6 +49,20 @@ let products = [
         count: 0
     },
     {
+        name: 'Shanghai Scallion Pancake',
+        category: 'Vegetarian',
+        description: 'Crispy, flaky, chewy Chinese flatbread filled with green onions. Served with dipping sauce.',
+        price: 1.50,
+        img: 'images/scallionPancake.jpg'
+    },
+    {
+        name: 'Giant Chicken Cutlet',
+        category: 'Non-Vegetarian', 
+        description: 'A night market classic from the streets of Taiwan. A massive chicken breast cutlet is pounded, marinated, breaded in sweet potato flour, deep-fried, and seasoned with a house blend of salt and pepper powder',
+        price: 4.00,
+        img: 'images/giantChickenCutlet.png'
+    },
+    {
         name: 'Massive Margarita',
         category: 'Non-Vegetarian',
         description: 'This massive margarita is more than just a drink, it\'s your whole meal.',
@@ -58,7 +72,7 @@ let products = [
     },
     {
         name: 'Loaded Shake',
-        category: 'Non-Vegetarian',
+        category: 'Vegetarian',
         description: 'Ignore the calories and indulge yourself in this shake, loaded with tons of our favorite sweets.',
         price: 7.00,
         img: 'images/LoadedShake.png',
@@ -67,7 +81,7 @@ let products = [
     {
         name: 'Burger Tower',
         category: 'Non-Vegetarian',
-        description: 'A gigantic burger with twelve patties and enough cheese to make Wisconsin proud',
+        description: 'A gigantic burger with twelve patties and enough cheese to make Wisconsin proud.',
         price: 15.00,
         img: 'images/burgertower.jpg',
         count: 0
@@ -75,7 +89,7 @@ let products = [
     {
         name: 'Krispy Kreme Sloppy Joe',
         category: 'Non-Vegetarian',
-        description: 'a deep-fried, beef-based, cheddar-cheese creation, served on two halves of glazed donut',
+        description: 'A deep-fried, beef-based, cheddar-cheese creation, served on two halves of glazed donut.',
         price: 15.00,
         img: 'images/sloppyjoe.jpg',
         count: 0
