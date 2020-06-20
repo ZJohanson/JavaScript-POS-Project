@@ -120,7 +120,7 @@ document.getElementById('productList').addEventListener('click', event => {
     total.innerText = '';
     products.forEach(obj => {
         if(obj.count > 0) {
-            cart.innerText += `${obj.name} QTY:  ${obj.count} `;
+            cart.innerHTML += `${obj.name} QTY:  ${obj.count} `;
         }
     })
     total.innerText = `Total: $${(subtotalPlusTax(cartArray)).toFixed(2)}`;

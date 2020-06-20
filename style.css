@@ -7,7 +7,7 @@ body {
   padding: 0;
 }
 .homePageContainer{
-  background-color: tan;
+  background-color: black;
   
 }
 *,
@@ -49,13 +49,7 @@ h1 {
   height: 100vh;
   opacity: 0.1;
 }
-.iconify{
-  width: 40px;
-  height: 40px; 
-  color:white;
-  z-index: 1;
 
-}
 ul {
   display: flex;
   list-style: none;
@@ -66,8 +60,7 @@ ul {
 }
 
 img {
-  display: flex;
-  flex-direction: row;
+  align-items: center;
   width: 350px;
   height: 225px;
 }
@@ -99,18 +92,24 @@ img {
 .product-name ,.product-category,.product-description {
   border-bottom-style: outset;
   border-color:white;
-  opacity: 50%;
+  color: white;
+  opacity: 80%;
 }
 .addToCart {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: rgb(255, 255, 255);
+  position: relative;
+  margin: 10px;
+  padding: 20px 20px;
+  color: #fff;
   background-color: rgb(121, 34, 34);
+  font-size:14px;
+  font-weight: bold;
   text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  letter-spacing: .08em;
+  border-radius: 0;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
 }
 
 #allFoodBtn, #vegBtn, #nonVegBtn{
@@ -137,22 +136,7 @@ img {
 display: flex;
 justify-content: center;
 }
-.empty {
-  position: relative;
-    margin: 30px;
-    padding: 14px 15px;
-    color: #fff;
-    background-color: rgb(121, 34, 34);;
-    font-size:14px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    overflow: hidden;
-    letter-spacing: .08em;
-    border-radius: 0;
-    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
-}
+
 .payment{
   display: flex;
   flex-direction: column;
@@ -186,7 +170,23 @@ justify-content: center;
   margin: 30px;
   padding: 14px 15px;
   color: #fff;
-  background-color: rgb(121, 34, 34);;
+  background-color: rgb(121, 34, 34);
+  font-size:14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  letter-spacing: .08em;
+  border-radius: 0;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+.removeFromCart{
+  position: relative;
+  margin: 10px;
+  padding: 5px 5px;
+  color: #fff;
+  background-color: rgb(121, 34, 34);
   font-size:14px;
   font-weight: bold;
   text-align: center;
@@ -203,18 +203,45 @@ input[type=text] {
   width: 20%;
   margin-bottom: 20px;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid white;
   border-radius: 3px;
 }
-#cashPayment{
+.payment{
+  display: flex;
+}
+#cashPayment, #receipt, #reciept, #choosePaymentType{
  color:white;
 }
 .cartPayment{
   color:white;
 }
-#choosePaymentType{
+#cardInfo {
   color: white;
+  margin:30px;
 }
-#reciept{
-  color: white;
+#cashForm{
+  margin:30px;
 }
+ #cartArray, #total, #change{
+   color: white;
+   margin: 25px;
+   font-size: 20px;
+ }
+ #customerOrder{
+   display: flex;
+   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+   color: white;
+   background: rgba(121, 34, 34, 0.37); 
+ }
+ .payment{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ .receipt{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+ }
