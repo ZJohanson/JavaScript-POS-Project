@@ -6,15 +6,18 @@ body {
   margin: 0;
   padding: 0;
 }
-.homePageContainer{
+
+.homePageContainer {
   background-color: black;
   
 }
+
 *,
 *::before,
 *::after {
   box-sizing: inherit;
 }
+
 .section {
   display: flex;
   position: relative;
@@ -25,8 +28,8 @@ body {
   justify-content: center;
   overflow: hidden;
 }
-h1 {
 
+h1 {
   text-align: center;
   color: rgb(255, 255, 255);
   font-size: 7rem;
@@ -35,11 +38,13 @@ h1 {
   margin: 15px;
   z-index: 1;
 }
+
 .video-container {
   position: absolute;
   left: 0;
   width: 100%;
 }
+
 .color-overlay {
   position: absolute;
   top: 0;
@@ -71,6 +76,7 @@ img {
   display: flex;
   flex-direction: column;
 }
+
 .fairFood {
   display: flex;
   flex-direction: column;
@@ -83,15 +89,20 @@ img {
   color: white;
   margin: 20px;
 }
-.category{
+
+.category {
   display: flex;
   justify-content: center;
 }
+
 .push-off-screen {
   position: absolute;
   left: -1000px;
 }
-.product-name ,.product-category,.product-description {
+
+.product-name, 
+.product-category, 
+.product-description {
   border-bottom-style: outset;
   border-color:white;
   color: white;
@@ -114,44 +125,47 @@ img {
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
 }
 
-#allFoodBtn, #vegBtn, #nonVegBtn{
-   position: relative;
-    margin: 30px;
-    padding: 14px 15px;
-    color: #fff;
-    background-color: rgb(121, 34, 34);;
-    font-size:14px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    overflow: hidden;
-    letter-spacing: .08em;
-    border-radius: 0;
-    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+#allFoodBtn,
+#vegBtn, 
+#nonVegBtn {
+  position: relative;
+  margin: 30px;
+  padding: 14px 15px;
+  color: #fff;
+  background-color: rgb(121, 34, 34);;
+  font-size:14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  letter-spacing: .08em;
+  border-radius: 0;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
     transition: all 1s ease;
 }
+
 .customerOrder {
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-.payment{
+.payment {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-
-.billing{
+.billing {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.checkout{
+
+.checkout {
   position: relative;
   margin: 30px;
   padding: 14px 15px;
@@ -167,7 +181,8 @@ justify-content: center;
   border-radius: 0;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
 }
-#cashOut{
+
+#cashOut {
   position: relative;
   margin: 30px;
   padding: 14px 15px;
@@ -183,7 +198,8 @@ justify-content: center;
   border-radius: 0;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
 }
-.removeFromCart{
+
+.removeFromCart {
   position: relative;
   margin: 10px;
   padding: 5px 5px;
@@ -201,49 +217,62 @@ justify-content: center;
 }
 
 input[type=text] {
-   justify-content: center;
+  justify-content: center;
   width: 20%;
   margin-bottom: 20px;
   padding: 12px;
   border: 1px solid white;
   border-radius: 3px;
 }
-.payment{
+.payment {
   display: flex;
 }
-#cashPayment, #receipt, #reciept, #choosePaymentType{
+
+#cashPayment, 
+#receipt, 
+#reciept, 
+#choosePaymentType {
  color:white;
 }
-.cartPayment{
+
+.cartPayment {
   color:white;
 }
+
 #cardInfo {
   color: white;
   margin:30px;
 }
-#cashForm{
-  margin:30px;
+
+#cashForm {
+  margin: 30px;
 }
- #cartArray, #total, #change{
-   color: white;
-   margin: 25px;
-   font-size: 20px;
- }
- #customerOrder{
-   display: flex;
-   flex-direction: column;
+
+#cartArray, 
+#total, 
+#change {
+  color: white;
+  margin: 25px;
+  font-size: 20px;
+}
+
+ #customerOrder {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-   color: white;
-   background: rgba(121, 34, 34, 0.37); 
+  color: white;
+  background: rgba(121, 34, 34, 0.37); 
  }
- .payment{
+
+ .payment {
   display: flex;
   align-items: center;
   justify-content: center;
  }
- .receipt{
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
- }
+
+ .receipt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
