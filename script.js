@@ -129,7 +129,7 @@ document.getElementById('productList').addEventListener('click', event => {
     }
     if(event.target.className === 'removeFromCart') {
         let index = event.target.value;
-        products[index].count--;
+        while(products[index].count > 0) { products[index].count--; }
         cartArray.splice(products[index], 1);
     }
     cart.innerText = '';
@@ -139,14 +139,14 @@ document.getElementById('productList').addEventListener('click', event => {
             cart.innerHTML += `${obj.name} QTY:  ${obj.count} `;
         }
     })
-    total.innerText = `Total: $${(subtotalPlusTax(cartArray)).toFixed(2)}`;
+    total.innerText = `Total: $${(subtotalPlusTax(products)).toFixed(2)}`;
 });
 
 // Get subtotal and convert to post-tax Total
 function subtotalPlusTax(array) {
     let subtotal = 0;
     for(let obj of array) {
-        subtotal += obj.price * obj.count;
+        subtotal += obj.price * obj.count
     }
     return subtotal * 1.06;
 }
@@ -216,20 +216,3 @@ document.getElementById('checkout').addEventListener('click', event => {
     }
     receipt.innerHTML += `<h1>Total: $${(subtotalPlusTax(cartArray)).toFixed(2)}</h1>`;
 })
-// Provide a receipt for the payment which includes the item(s) bought, the subtotal, total, and anything else of interest. 
-
-
-
-//If the user is paying with a card, ask for the card number, expiration, and CVV
-    //If 'pay by card' option is selected/clicked/checked, then 
-        //Take user input for card number
-        //input forms?
-    //stretch goal: validation for credit card numbers
-        //makes sure number is 16 digits, expiration is valid date/ 4 digits, CVV is 3 digits
-    //No change necessary, amount tendered should equal the total exactly
-    
-//Provide a receipt for the payment which includes the item(s) bought, the subtotal, total, and anything else of interest
-    //Generate PDF?
-    //Generate new html page?
-        //include labels for items, total, subtotal, etc -- don't just list the values
-    //Style up the receipt so it looks nice? If we're thinking checkout/order summary page vs. thermal paper receipt        
