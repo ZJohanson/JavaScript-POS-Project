@@ -9,79 +9,71 @@
     <link href="https://fonts.googleapis.com/css2?family=Expletus+Sans:wght@700&display=swap" rel="stylesheet">
     <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
 </head>
-<div class="homePageContainer">
 <body>
-    <div class="section">
-        <h1>FAIR FOOD</h1>
+    <div class="homePageContainer">
+        <div class="section">
+            <h1>FAIR FOOD</h1>
         <div class="video-container">
             <div class="color-overlay"></div>
             <video autoplay loop muted>
                 <source src="images/video.mp4" type="video/mp4">
             </video>
         </div>
-       
-    </div>
-    <!-- Select category of food buttons -->
-    
-    <div class="category">
-        <button class='btn' id='allFoodBtn'>All Food</button>
-        <button class='btn' id='vegBtn'>Vegetarian</button>
-        <button class='btn' id='nonVegBtn'>Non-Vegetarian</button>
-    </div>
-  
-    <div class='products'>
-        <ul id="productList">
-        </ul>
-    </div>
-    <div class="customerOrder" id='customerOrder'>
-        <h2>Your Order</h2>
-        <div class="cart-Array" id="cartArray">
-            <!-- products added to cart go here -->
-
         </div>
 
-        <div class="total" id="total">
-
-        </div>
-    </div>
-    <div class="payment">
-        <h2 class= "cartPayment">Payment</h2>
-        <form id='choosePaymentType'>
-            <input type='radio' id='cash' name='payment-method' value='cash' checked="checked">
-            <label for='cash'>Cash</label>
-            <input type='radio' id='card' name='payment-method' value='card'>
-            <label for='card'>Card</label>
-        </form>
-        <form id="cashPayment" class="">
-            <label>Cash Amount</label>
-            <input type='text' id='cashForm' name='cashForm' value='0.00'>
-            <button type="submit" name="cashForm" id='cashOut'>Pay Us Money</button>
-        </form>
-        <div class="change" id="change">
-
+        <!-- Select category of food buttons -->
+        <div class="category">
+            <button class='btn' id='allFoodBtn'>All Food</button>
+            <button class='btn' id='vegBtn'>Vegetarian</button>
+            <button class='btn' id='nonVegBtn'>Non-Vegetarian</button>
         </div>
 
-        <div class='card-info push-off-screen' id="cardInfo"> 
-        <!-- Show only if 'card' radio button is selected -->
-            <label for='card-number'>Card Number</label>
-            <input type='text' id='card-number' name='card-number' value=''>
-            <label for='card-expiration'>Expiration Date</label>
-            <input type='text' id='card-expiration' name='card-expiration' value=''>
-            <label for='cvv'>CVV</label>
-            <input type='text' id='cvv' name='cvv' value=''>
+        <div class='products'>
+            <ul id="productList">
+            </ul>
         </div>
+
+        <div class="customerOrder" id='customerOrder'>
+            <h2>Your Order</h2>
+            <div class="cart-Array" id="cartArray">
+                <!-- products added to cart go here -->
+            </div>
+
+            <div class="total" id="total"></div>
+        </div>
+        <div class="payment">
+            <h2 class= "cartPayment">Payment</h2>
+            <form id='choosePaymentType'>
+                <input type='radio' id='cash' name='payment-method' value='cash' checked="checked">
+                <label for='cash'>Cash</label>
+                <input type='radio' id='card' name='payment-method' value='card'>
+                <label for='card'>Card</label>
+            </form>
+            <form id="cashPayment" class="">
+                <label>Cash Amount</label>
+                <input type='text' id='cashForm' name='cashForm' value='0.00'>
+                <button type="submit" name="cashForm" id='cashOut'>Pay Us Money</button>
+            </form>
+            <div class="change" id="change"></div>
+
+            <div class='card-info push-off-screen' id="cardInfo"> 
+                <!-- Show only if 'card' radio button is selected -->
+                <label for='card-number'>Card Number</label>
+                <input type='text' id='card-number' name='card-number' value=''>
+                <label for='card-expiration'>Expiration Date</label>
+                <input type='text' id='card-expiration' name='card-expiration' value=''>
+                <label for='cvv'>CVV</label>
+                <input type='text' id='cvv' name='cvv' value=''>
+            </div>
         </div> 
         <div class="billing">
-        <button class='checkout' id="checkout"><submit>Checkout</submit></button>
+            <button class='checkout' id="checkout"><submit>Checkout</submit></button>
         </div>
-     <div class="modal push-off-screen" id="receipt">
-
-     </div>   
+        <div class="modal push-off-screen" id="receipt"></div>   
         <!-- payment information (cash or card, subtotal, sales tax, total) goes here -->
-
-    <footer>
-        <!-- footer info goes here -->
-    </footer>
+        <footer></footer>
+        
+    </div>
     <script src='script.js'></script>
 </body>
 </html>
