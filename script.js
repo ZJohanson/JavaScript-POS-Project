@@ -114,7 +114,7 @@ function pushProduct() {
 
 pushProduct();
 
-// Add to Cart 
+// Add and remove products in Cart 
 let cartArray = [];
 const cart = document.getElementById('cartArray');
 const total = document.getElementById('total');
