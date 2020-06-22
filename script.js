@@ -136,7 +136,7 @@ document.getElementById('productList').addEventListener('click', event => {
     total.innerText = '';
     products.forEach(obj => {
         if(obj.count > 0) {
-            cart.innerHTML += `${obj.name} QTY:  ${obj.count} `;
+            cart.innerHTML += `<div class="cartStyle">${obj.name} QTY:  ${obj.count} </div>`;
         }
     })
     total.innerText = `Total: $${(subtotalPlusTax(products)).toFixed(2)}`;
@@ -212,8 +212,8 @@ document.getElementById('checkout').addEventListener('click', event => {
     receipt.innerHTML = '';
     for(let obj of products) {
         if(obj.count > 0) {
-            receipt.innerHTML += `<img src='${obj.img}'> ${obj.name}  QTY:  ${obj.count} PRICE: $${(obj.price).toFixed(2)}`;
+            receipt.innerHTML += `<div class="checkoutStyle"><img src='${obj.img}'>${obj.name}  QTY:  ${obj.count} PRICE: $${(obj.price).toFixed(2)}</div>`;
         }
     }
-    receipt.innerHTML += `<h1>Total: $${(subtotalPlusTax(products)).toFixed(2)}</h1>`;
+    receipt.innerHTML += `<div class="totalAmount"<h1>Total: $${(subtotalPlusTax(products)).toFixed(2)}</h1></div>`;
 })

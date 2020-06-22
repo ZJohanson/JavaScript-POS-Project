@@ -5,6 +5,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: black;
 }
 
 .homePageContainer {
@@ -273,6 +274,18 @@ input[type=text] {
 
  .receipt {
   display: flex;
+  flex-wrap: wrap;
+}
+
+.checkoutStyle{
+  display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  justify-content: center;
+
+ margin:10px;
+ 
+}
+.totalAmount{
+
+  font-size: 7em;
 }
