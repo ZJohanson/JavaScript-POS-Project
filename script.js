@@ -53,7 +53,8 @@ let products = [
         category: 'Vegetarian',
         description: 'Crispy, flaky, chewy Chinese flatbread filled with green onions. Served with dipping sauce.',
         price: 1.50,
-        img: 'images/scallionPancake.jpg'
+        img: 'images/scallionPancake.jpg',
+        count: 0
     },
     {
         name: 'Giant Chicken Cutlet',
