@@ -144,7 +144,7 @@ document.getElementById('productList').addEventListener('click', event => {
 function subtotalPlusTax(array) {
     let subtotal = 0;
     for(let obj of array) {
-        subtotal = obj.price * obj.count;
+        subtotal += obj.price * obj.count;
     }
     return subtotal * 1.06;
 }
