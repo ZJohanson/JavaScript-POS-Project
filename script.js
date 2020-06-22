@@ -206,9 +206,9 @@ document.getElementById('cashOut').addEventListener('click', function(event) {
 document.getElementById('checkout').addEventListener('click', event => {
     event.preventDefault();
     const receipt = document.getElementById('receipt');
+    const mainPage = document.getElementById('homePageContainer');
+    mainPage.style.display = 'none';
     receipt.classList.remove('push-off-screen');
-
-    // let finalCart = new Set(cartArray);
     receipt.innerHTML = '';
     for(let obj of products) {
         if(obj.count > 0) {
