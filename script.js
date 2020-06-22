@@ -195,7 +195,7 @@ document.getElementById('choosePaymentType').addEventListener('click', event => 
 let amountTendered = () => document.getElementById('cashForm').value;
 
 function makeChange() {
-    return (parseInt(amountTendered()) - subtotalPlusTax(cartArray)).toFixed(2);
+    return (parseInt(amountTendered()) - subtotalPlusTax(products)).toFixed(2);
 }
 
 document.getElementById('cashOut').addEventListener('click', function(event) {
@@ -208,11 +208,12 @@ document.getElementById('checkout').addEventListener('click', event => {
     const receipt = document.getElementById('receipt');
     receipt.classList.remove('push-off-screen');
 
-    let finalCart = new Set(cartArray);
+    // let finalCart = new Set(cartArray);
     receipt.innerHTML = '';
-    for(let obj of finalCart) {
-        receipt.innerHTML += `<img src='${obj.img}'> ${obj.name}  QTY:  ${obj.count} PRICE: $${(obj.price).toFixed(2)}`;
-
+    for(let obj of products) {
+        if(obj.count > 0) {
+            receipt.innerHTML += `<img src='${obj.img}'> ${obj.name}  QTY:  ${obj.count} PRICE: $${(obj.price).toFixed(2)}`;
+        }
     }
-    receipt.innerHTML += `<h1>Total: $${(subtotalPlusTax(cartArray)).toFixed(2)}</h1>`;
+    receipt.innerHTML += `<h1>Total: $${(subtotalPlusTax(products)).toFixed(2)}</h1>`;
 })
