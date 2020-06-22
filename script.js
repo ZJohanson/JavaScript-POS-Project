@@ -150,23 +150,28 @@ function subtotalPlusTax(array) {
 }
 
 // Sort food by category
-const allFood = document.querySelectorAll('.fairFood');
-const vegetarian = document.querySelectorAll('.Vegetarian');
-const nonVeg = document.querySelectorAll('.Non-Vegetarian');
 
-document.getElementById('allFoodBtn').addEventListener('click', function(){
-    allFood.forEach(element => element.classList.remove('push-off-screen'))
-});
+const categorySelection = () => document.getElementById('category');
+const addClass = elements => elements.forEach(element => element.classList.add('push-off-screen'));
+const removeClass = elements => elements.forEach(element => element.classList.remove('push-off-screen'));
 
-document.getElementById('vegBtn').addEventListener('click', function(){
-    vegetarian.forEach(element => element.classList.remove('push-off-screen'))
-    nonVeg.forEach(element => element.classList.add('push-off-screen'))
-});
-
-document.getElementById('nonVegBtn').addEventListener('click', function(){
-    vegetarian.forEach(element => element.classList.add('push-off-screen'))
-    nonVeg.forEach(element => element.classList.remove('push-off-screen'))
-});
+categorySelection().addEventListener('click', function(event){
+    const selection = event.target.value;
+    const allFood = document.querySelectorAll('.fairFood');
+    const vegetarian = document.querySelectorAll('.Vegetarian');
+    const nonVeg = document.querySelectorAll('.Non-Vegetarian');
+    if (event.target.tagName === 'BUTTON') {
+        if (selection === 'allFood') {
+            removeClass(allFood);
+        } else if (selection === 'vegetarian') {
+            addClass(nonVeg);
+            removeClass(vegetarian);
+        } else {
+            addClass(vegetarian);
+            removeClass(nonVeg);
+        }
+    }
+})
 
 // BILLING
 
