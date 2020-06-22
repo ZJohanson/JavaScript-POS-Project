@@ -151,23 +151,32 @@ function subtotalPlusTax(array) {
 }
 
 // Sort food by category
-const allFood = document.querySelectorAll('.fairFood');
-const vegetarian = document.querySelectorAll('.Vegetarian');
-const nonVeg = document.querySelectorAll('.Non-Vegetarian');
+// const allFood = document.querySelectorAll('.fairFood');
+// const vegetarian = document.querySelectorAll('.Vegetarian');
+// const nonVeg = document.querySelectorAll('.Non-Vegetarian');
 
-document.getElementById('allFoodBtn').addEventListener('click', function(){
-    allFood.forEach(element => element.classList.remove('push-off-screen'))
+// Get category button click
+document.getElementById('category').addEventListener('click', function(element) {
+    let selection = element.target.value;
+    document.querySelectorAll(selection).forEach(element => {
+        element.classList.remove('push-off-screen');
+    })
+
 });
 
-document.getElementById('vegBtn').addEventListener('click', function(){
-    vegetarian.forEach(element => element.classList.remove('push-off-screen'))
-    nonVeg.forEach(element => element.classList.add('push-off-screen'))
-});
+// document.getElementById('allFoodBtn').addEventListener('click', function(){
+//     allFood.forEach(element => element.classList.remove('push-off-screen'))
+// });
 
-document.getElementById('nonVegBtn').addEventListener('click', function(){
-    vegetarian.forEach(element => element.classList.add('push-off-screen'))
-    nonVeg.forEach(element => element.classList.remove('push-off-screen'))
-});
+// document.getElementById('vegBtn').addEventListener('click', function(){
+//     vegetarian.forEach(element => element.classList.remove('push-off-screen'))
+//     nonVeg.forEach(element => element.classList.add('push-off-screen'))
+// });
+
+// document.getElementById('nonVegBtn').addEventListener('click', function(){
+//     vegetarian.forEach(element => element.classList.add('push-off-screen'))
+//     nonVeg.forEach(element => element.classList.remove('push-off-screen'))
+// });
 
 // BILLING
 
