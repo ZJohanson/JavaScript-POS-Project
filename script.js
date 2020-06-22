@@ -53,14 +53,16 @@ let products = [
         category: 'Vegetarian',
         description: 'Crispy, flaky, chewy Chinese flatbread filled with green onions. Served with dipping sauce.',
         price: 1.50,
-        img: 'images/scallionPancake.jpg'
+        img: 'images/scallionPancake.jpg',
+        count: 0
     },
     {
         name: 'Giant Chicken Cutlet',
         category: 'Non-Vegetarian', 
         description: 'A night market classic from the streets of Taiwan. A massive chicken breast cutlet is pounded, marinated, breaded in sweet potato flour, deep-fried, and seasoned with a house blend of salt and pepper powder',
         price: 4.00,
-        img: 'images/giantChickenCutlet.png'
+        img: 'images/giantChickenCutlet.png',
+        count: 0
     },
     {
         name: 'Massive Margarita',
